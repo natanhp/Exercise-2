@@ -3,6 +3,7 @@ function printHasil(angka){
 }
 
 function getAngkas(){
+    document.querySelector("#warning").innerHTML="";
     return{
         "angka1":parseInt(document.querySelector("#angka1").value),
         "angka2":parseInt(document.querySelector("#angka2").value)
@@ -89,7 +90,7 @@ document.querySelector("#bagi").addEventListener("click", function(){
         hasil = angka1/0;
         document.querySelector("#warning").innerHTML = '<div class="alert alert-danger" role="alert">Error: Pembagian dengan 0!</div>'
     }else{
-        document.querySelector("#angka2").innerHTML = '<div class="alert alert-danger" role="alert"> Error: Pembagian dengan 0!</div>'
+        document.querySelector("#warning").innerHTML = '<div class="alert alert-danger" role="alert"> Error: Pembagian dengan 0!</div>'
     }
 
     printHasil(hasil);
@@ -109,7 +110,7 @@ document.querySelector("#mod").addEventListener("click", function(){
     }else if(isNaN(angka2) || angka2===0){
         document.querySelector("#warning").innerHTML = '<div class="alert alert-danger" role="alert">Error: Modulus dengan 0!</div>'
     }else{
-        document.querySelector("#angka2").innerHTML = '<div class="alert alert-danger" role="alert"> Error: Modulus dengan 0!</div>'
+        document.querySelector("#warning").innerHTML = '<div class="alert alert-danger" role="alert"> Error: Modulus dengan 0!</div>'
     }
 
     printHasil(hasil);
