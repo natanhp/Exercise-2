@@ -13,10 +13,20 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
         
         <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+        
+        <link rel="stylesheet" href="styles/style.css"/>
+        <title>Calculator</title>
 
-        <title>Data Diri</title>
+        <!-- Sumber Icon: https://icons-for-free.com/icon-calculator_online_shop_shopping_icon_1871426/ -->
+        <link rel="shortcut icon" type="image/png" href="images/calc_icon.png"/>
     </head>    
     <body>
+        <div class="jumbotron jumbotron-fluid header">
+            <div class="container">
+                <img class="img-fluid" src="images/calc_icon.png">
+                <h1 class="display-4">Calculator</h1>
+            </div>
+        </div>
         <div class="container">
             <form>
                 <div class="form-group">
@@ -27,21 +37,25 @@
                     <label for="angka2">Angka 2: </label>
                     <input type="number" class="form-control" id="angka2" placeholder="Masukan angka kedua">
                 </div>
+                <div id="warning">
+
+                </div>
                 <div class="form-group">
                     <label for="hasil">Hasil: </label>
                     <input type="text" class="form-control" id="hasil" placeholder="Hasil" readonly>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-warning fas fa-plus"></button>
-                    <button type="button" class="btn btn-warning fas fa-minus"></button>
-                    <button type="button" class="btn btn-warning fas fa-times"></button>
-                    <button type="button" class="btn btn-warning fas fa-divide"></button>
-                    <button type="button" class="btn btn-warning fas fa-percentage"></button>
-                    <button type="button" class="btn btn-warning fas fa-superscript"></button>
-                    <button type="button" class="btn btn-warning fas fa-square-root-alt"></button>
-                    <button type="button" class="btn btn-primary fas fa-equals"></button>
+                    <button type="button" class="btn btn-warning fas fa-plus" id="plus"></button>
+                    <button type="button" class="btn btn-warning fas fa-minus" id="minus"></button>
+                    <button type="button" class="btn btn-warning fas fa-times" id="kali"></button>
+                    <button type="button" class="btn btn-warning fas fa-divide" id="bagi"></button>
+                    <button type="button" class="btn btn-warning fas fa-percentage" id="mod"></button>
+                    <button type="button" class="btn btn-warning fas fa-superscript" id="sqr"></button>
+                    <button type="button" class="btn btn-warning fas fa-square-root-alt" id="sqrt"></button>
                 </div>
             </form>
         </div>
+
+        <script src="scripts/main.js"></script>
     </body>
 </html>
